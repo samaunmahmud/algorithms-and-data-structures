@@ -1,5 +1,7 @@
 package LinkedListPM;
 
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 
     private class Node {
@@ -17,6 +19,7 @@ public class LinkedList {
 
     private Node first;
     private Node last;
+    private int size =0;
 
     public void addLast(int item) {
         var node = new Node(item);
@@ -28,6 +31,7 @@ public class LinkedList {
             last.next = node;
             last = node;
         }
+        size++;
 
     }
 
@@ -41,6 +45,7 @@ public class LinkedList {
 
             first = node;
         }
+        size++;
     }
 
 
@@ -72,12 +77,52 @@ public class LinkedList {
 
 
     public void removeFirst(){
+
+        if(isEmpty()){
+            throw new NoSuchElementException();
+        }
+
+        if(first == last){
+            first = last = null;
+            size--;
+            return;
+        }
         var second = first.next;
 
         first.next = null;
         first = second;
+        size--;
 
 
+    }
+
+    public void removeLast(){
+
+
+        if(isEmpty()){
+            throw new NoSuchElementException();
+        }
+
+        if(first == last){
+            first = last = null;
+            size--;
+            return;
+        }
+        var current =first;
+
+        while(current.next!= null){
+            if(current.next.next == null){
+                last =current;
+                last.next = null;
+            }
+            current = current.next;
+        }
+        size--;
+    }
+
+
+    public int size(){
+        return size;
     }
 
 
