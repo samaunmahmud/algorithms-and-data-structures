@@ -13,6 +13,8 @@ public class Main {
         list.addLast(50);
         list.addLast(45);
 
+        System.out.println(50);
+
 
 
 
