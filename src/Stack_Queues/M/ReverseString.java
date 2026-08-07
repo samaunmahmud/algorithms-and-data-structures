@@ -9,6 +9,15 @@ public class ReverseString {
         Stack<Character> c = new Stack<>();
         String str = "ABCD";
 
+
+
+        String result = reversedString(str, c);
+
+        // Convert char array back to String or print directly
+        System.out.println(result); // Output: DCBA
+    }
+
+    public static String reversedString(String str, Stack<Character> c){
         // Push all characters onto the stack
         for (int i = 0; i < str.length(); i++) {
             c.push(str.charAt(i));
@@ -23,8 +32,8 @@ public class ReverseString {
             arr[j] = c.pop();
             j++;
         }
+        return Arrays.toString(arr);
 
         // Convert char array back to String or print directly
-        System.out.println(new String(arr)); // Output: DCBA
     }
 }
