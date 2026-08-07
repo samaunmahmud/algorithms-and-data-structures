@@ -6,9 +6,9 @@ public class LinkedList {
 
     private class Node {
 
-        private int value;
+        public int value;
 
-        private Node next;
+        public Node next;
 
 
         public Node(int value) {
