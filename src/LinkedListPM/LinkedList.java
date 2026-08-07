@@ -126,6 +126,49 @@ public class LinkedList {
     }
 
 
+    public int[] toArray(){
+        var array = new int[size];
+        var current = first;
+
+        var index = 0;
+
+        while(current != null){
+            array[index]= current.value;
+            current = current .next;
+            index++;
+        }
+        return array;
+    }
+
+
+    public void reverse(){
+        if(isEmpty()){
+            return;
+        }
+
+        var current = first.next;
+        var store = current;
+        var previous =first;
+        while(current!=null){
+            store = current.next;
+            current.next = previous;
+            previous = current;
+            current = store;
+
+
+
+
+
+        }
+        last = first;
+        last.next = null;
+
+        first=previous;
+
+
+    }
+
+
 
 }
 
