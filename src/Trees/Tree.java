@@ -102,6 +102,10 @@ public class Tree {
 
     private void traversePostOrder(Node node){
 
+        if(node == null){
+            return;
+        }
+
         traversePostOrder(node.leftChild);
         traversePostOrder(node.rightChild);
         System.out.print(node.data+" ");
