@@ -27,6 +27,11 @@ public class Main {
         tree.insert(9);
 
         tree.traversePreOrder();
+        System.out.println();
+
+        tree.traverseInOrder();
+
+        System.out.println();
 
 
 
