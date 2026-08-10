@@ -11,15 +11,44 @@ public class Tree {
         }
     }
 
-        private Node root;
+
+     private Node root;
+
+
 
 
 
         void insert(int data){
+         var node = new Node(data);
             if(root == null){
-                root = new Node(data);
+                root = node;
+                return;
             }
+
+
+            var current  = root;
+            while(true){
+                if(data <current.data){
+                    if(current.leftChild == null){
+                        current.leftChild = node;
+                        break;
+                    }
+                    current = current.leftChild;
+                }else if(data > current.data){
+                    if(current.rightChild == null){
+                        current.rightChild = node;
+                        break;
+                    }
+                    current = current.rightChild;
+                }else{
+                    break;
+                }
+
+            }
+
         }
+
+
 
 
 
