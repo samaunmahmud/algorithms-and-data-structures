@@ -23,5 +23,8 @@ public class Main {
 
         System.out.println("Done");
 
+
+        System.out.println(tree.find(17));
+
     }
 }

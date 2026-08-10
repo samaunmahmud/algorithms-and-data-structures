@@ -48,6 +48,23 @@ public class Tree {
 
         }
 
+        public boolean find(int data){
+            while(true){
+
+                if(root == null){
+                    return false;
+
+                }
+                if(data == root.data){
+                    return true;
+                }else if(data < root.data){
+                    root = root.leftChild;
+                }else{
+                    root = root.rightChild;
+                }
+            }
+        }
+
 
 
 
