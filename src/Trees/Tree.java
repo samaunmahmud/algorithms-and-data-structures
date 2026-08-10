@@ -49,18 +49,20 @@ public class Tree {
         }
 
         public boolean find(int data){
+
+            var current = root;
             while(true){
 
-                if(root == null){
+                if(current == null){
                     return false;
 
                 }
-                if(data == root.data){
+                if(data == current.data){
                     return true;
-                }else if(data < root.data){
-                    root = root.leftChild;
+                }else if(data < current.data){
+                    current = current.leftChild;
                 }else{
-                    root = root.rightChild;
+                    current = current.rightChild;
                 }
             }
         }
