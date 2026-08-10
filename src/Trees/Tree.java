@@ -12,65 +12,56 @@ public class Tree {
     }
 
 
-     private Node root;
+    private Node root;
 
 
+    void insert(int data) {
+        var node = new Node(data);
+        if (root == null) {
+            root = node;
+            return;
+        }
 
 
-
-        void insert(int data){
-         var node = new Node(data);
-            if(root == null){
-                root = node;
-                return;
-            }
-
-
-            var current  = root;
-            while(true){
-                if(data <current.data){
-                    if(current.leftChild == null){
-                        current.leftChild = node;
-                        break;
-                    }
-                    current = current.leftChild;
-                }else if(data > current.data){
-                    if(current.rightChild == null){
-                        current.rightChild = node;
-                        break;
-                    }
-                    current = current.rightChild;
-                }else{
+        var current = root;
+        while (true) {
+            if (data < current.data) {
+                if (current.leftChild == null) {
+                    current.leftChild = node;
                     break;
                 }
-
+                current = current.leftChild;
+            } else if (data > current.data) {
+                if (current.rightChild == null) {
+                    current.rightChild = node;
+                    break;
+                }
+                current = current.rightChild;
+            } else {
+                break;
             }
 
         }
 
-        public boolean find(int data){
+    }
 
-            var current = root;
-            while(true){
+    public boolean find(int data) {
 
-                if(current == null){
-                    return false;
+        var current = root;
+        while (current != null) {
 
-                }
-                if(data == current.data){
-                    return true;
-                }else if(data < current.data){
-                    current = current.leftChild;
-                }else{
-                    current = current.rightChild;
-                }
+
+            if (data == current.data) {
+                return true;
+            } else if (data < current.data) {
+                current = current.leftChild;
+            } else {
+                current = current.rightChild;
             }
         }
-
-
-
-
+        return false;
 
 
     }
+}
 
