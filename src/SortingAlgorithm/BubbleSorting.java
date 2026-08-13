@@ -13,17 +13,23 @@ public class BubbleSorting {
         public static void bubbleSort(int[] arr){
             for (int i = 0; i < arr.length-1; i++) {
                 for (int j = 0; j < arr.length-1; j++) {
-                    if (arr[j] > arr[j + 1]) {
-                        int temp = arr[j];
-                        arr[j] = arr[j + 1];
-                        arr[j + 1] = temp;
-                    }
+                    swap(arr,i,j);
                 }
 
             }
 
             for(int k : arr){
                 System.out.print(k+" ");
+            }
+
+        }
+
+
+        private static void  swap(int[] arr,int i,int j){
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
 
         }
