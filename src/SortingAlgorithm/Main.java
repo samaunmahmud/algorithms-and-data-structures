@@ -1,6 +1,7 @@
 package SortingAlgorithm;
 
 import static SortingAlgorithm.BubbleSorting.bubbleSort;
+import static SortingAlgorithm.InsertionSorting.insertionSort;
 import static SortingAlgorithm.SelectionSorting.selectionSort;
 
 
@@ -12,7 +13,8 @@ public class Main {
 
 //        bubbleSort(arr);
 
-        selectionSort(arr);
+//        selectionSort(arr);
+        insertionSort(arr);
 
 
     }
