@@ -22,10 +22,20 @@ public class Main {
 //        String st = reverseWords.reverseWords(s);
 
 
-        String s1 ="ABCD";
-        String s2= "BCD";
-        boolean check = Rotations(s1, s2);
-        System.out.println(check);
+//        String s1 ="ABCD";
+//        String s2= "BCD";
+//        boolean check = Rotations(s1, s2);
+//        System.out.println(check);
+        String s = "jauanoaug bjaouajna unajngjn oanojnaoao";
+
+        removeDuplicateCharFromString remove = new removeDuplicateCharFromString();
+
+        String rs = remove.removeDuplicate(s);
+        System.out.println(rs);
+
+
+
+
 
 
 
