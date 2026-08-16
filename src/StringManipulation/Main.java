@@ -1,0 +1,15 @@
+package StringManipulation;
+
+public class Main {
+
+
+    public static void main(String[] args){
+
+        String s = "aEiOu";
+
+        int number = CountVowels.countVowels(s);
+        System.out.println("Number of Vowles is : "+number);
+
+
+    }
+}
