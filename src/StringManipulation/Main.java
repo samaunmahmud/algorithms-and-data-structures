@@ -26,12 +26,22 @@ public class Main {
 //        String s2= "BCD";
 //        boolean check = Rotations(s1, s2);
 //        System.out.println(check);
-        String s = "jauanoaug bjaouajna unajngjn oanojnaoao";
+        String s = "jauWDoaug bjaouajna unaKDFDnaoao";
 
-        removeDuplicateCharFromString remove = new removeDuplicateCharFromString();
+//        removeDuplicateCharFromString remove = new removeDuplicateCharFromString();
+//
+//        String rs = remove.removeDuplicate(s);
+//        System.out.println(rs);
 
-        String rs = remove.removeDuplicate(s);
-        System.out.println(rs);
+
+//        mostRepetedChar repetedChar = new mostRepetedChar();
+//
+//        System.out.println(repetedChar.RepetedChar(s));
+
+        CapitilizingString cap = new CapitilizingString();
+
+        System.out.println(cap.capitilize(s));
+
 
 
 
