@@ -38,9 +38,17 @@ public class Main {
 //
 //        System.out.println(repetedChar.RepetedChar(s));
 
-        CapitilizingString cap = new CapitilizingString();
+//        CapitilizingString cap = new CapitilizingString();
+//
+//        System.out.println(cap.capitilize(s));
 
-        System.out.println(cap.capitilize(s));
+        String s1 = "I love you";
+        String s2 = "I lov you";
+
+
+        Anagrams1 anagrams1 = new Anagrams1();
+
+        System.out.println(anagrams1.anagram(s1,s2));
 
 
 

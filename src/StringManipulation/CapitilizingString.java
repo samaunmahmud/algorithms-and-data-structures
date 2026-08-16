@@ -9,7 +9,7 @@ public class CapitilizingString {
             return "";
         }
 
-        String[] arr = s.split(" ");
+        String[] arr = s.trim().replaceAll(" +"," ").split(" ");
 
 
         for(int i =0; i<arr.length;i++){
